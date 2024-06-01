@@ -9,7 +9,7 @@ The following code loads the whole suduko board into a temp register so that it 
 addi t0, zero , 0  
 loop:   
     beq t0, SIZE, exit
-    addi t2, BASE_ADDRESS_OF_BOARD, t0
+    add t2, BASE_ADDRESS_OF_BOARD, t0
     lb  t3, 0(t2)
     addi t0,t0,1
     j loop
