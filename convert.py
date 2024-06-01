@@ -36,7 +36,7 @@ def read_lines_from_bottom(file_path):
             lines = [line.strip() for line in lines]
             # Filter lines that end with "lb       t3, 0x0(t2)"
             filtered_lines = [line for line in lines if line.endswith("lb       t3, 0x0(t2)")]
-            return filtered_lines[::-1]  # Reverse the order to get bottom-to-top
+            return filtered_lines
     except FileNotFoundError:
         print(f"File '{file_path}' not found.")
         return []
